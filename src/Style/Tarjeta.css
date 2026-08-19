@@ -1,0 +1,22 @@
+@import url('https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
+.Titulo{
+    font-size: 30px;
+    color: aqua
+}
+.Imagen{
+    width: 200px;
+    height: 200px;
+}
+
+.Centrar {
+    display: flex;
+    flex-direction: row;
+    background: rgb(121, 74, 164);
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+.Orga {
+    display: flex;
+    flex-direction: column;
+}
