@@ -1,4 +1,4 @@
-@import url('https://fonts.google.com/share?selection.family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 .Titulo{
     font-size: 30px;
     color: aqua
@@ -6,17 +6,63 @@
 .Imagen{
     width: 200px;
     height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.DescriptionTexto,
+.DescripcionTexto{
+    font-size: 16px;
+    color: #333;
+    margin: 0 10px;
 }
 
 .Centrar {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
     background: rgb(121, 74, 164);
     border: 5px solid black;
     border-radius: 15px;
 }
 
+.Contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .Orga {
     display: flex;
     flex-direction: column;
+}
+
+.Pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Header {
+    text-align: center;
+    padding: 20px 20px 0 20px;
+}
+
+.ZonaBoton {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.BotonImg {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
 }

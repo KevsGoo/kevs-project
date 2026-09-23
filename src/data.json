@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Carl",
+        "img": "images.jpeg",
+        "descripcion": "Carl es un minion alto de dos ojos que siempre posa con las manos en la cintura, muy seguro y divertido con sus compañeros",
+        "color": "#FF6B6B"
+    },
+    {
+        "id": 2,
+        "title": "Dave",
+        "img": "minion2.jpg",
+        "descripcion": "Dave es un minion gordito y sonriente de dos ojos, siempre alegre y listo para ayudar con una gran sonrisa",
+        "color": "#4ECDC4"
+    },
+    {
+        "id": 3,
+        "title": "Bob",
+        "img": "minion3.jpeg",
+        "descripcion": "Bob es el minion más tierno, inseparable de su osito Tim, juguetón, curioso y lleno de ternura",
+        "color": "#FFD93D"
+    },
+    {
+        "id": 4,
+        "title": "Kevin y Stuart",
+        "img": "minion4.jpeg",
+        "descripcion": "Kevin y Stuart disfrazados para una misión especial, el dúo más cómico que siempre arma planes divertidos juntos",
+        "color": "#9B5DE5"
+    }
+]
