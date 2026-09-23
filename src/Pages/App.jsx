@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function App() {
   return (
-    <BrowserRouter> {/* ← faltaba el > de cierre */}
+    <BrowserRouter> 
       <Routes>
         <Route exact path="/Tarjetas" element={<Tar />} />   
         <Route exact path="/" element={<Prueba />} />
