@@ -1,7 +1,21 @@
-import Tar from './Tar.jsx'
+import { useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Desintegracion from "../Componentes/Home/Desintegracion.jsx";
+import ABC from "../img/pedomelo.gif";
 
-export default function Prueba(){
-    return(
-        <Tar/>
+export default function Home(){
+    const navigate = useNavigate();
+    const irATarjetas = useCallback(() => navigate("/Tarjetas"), [navigate]);
+
+    return (
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh"}}>
+            <Desintegracion
+                src={ABC}
+                retraso={2500}
+                duracion={1000}
+                paso={2}
+                onFin={irATarjetas}
+            />
+        </div>
     )
 }
