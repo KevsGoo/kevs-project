@@ -10,7 +10,7 @@ export default function Desintegracion({
     const canvasRef = useRef(null)
     const imgRef = useRef(null)
     const onFinRef = useRef(onFin)
-    const [fase, setFase] = useState('mostrando') // mostrando (gif animado) -> desintegrando
+    const [fase, setFase] = useState('mostrando')
     const [prevSrc, setPrevSrc] = useState(src)
     if (prevSrc !== src) {
         setPrevSrc(src)
@@ -62,8 +62,6 @@ export default function Desintegracion({
             const escala = Math.min(1, 400 / img.naturalWidth)
             canvas.width = Math.round(img.naturalWidth * escala)
             canvas.height = Math.round(img.naturalHeight * escala)
-            // Prepara partículas desde el primer cuadro (canvas dibuja GIF estático,
-            // por eso durante 'mostrando' se ve el <img> animado y el canvas oculto)
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
 
             const { data } = ctx.getImageData(0, 0, canvas.width, canvas.height)
@@ -71,7 +69,7 @@ export default function Desintegracion({
             for (let y = 0; y < canvas.height; y += paso) {
                 for (let x = 0; x < canvas.width; x += paso) {
                     const i = (y * canvas.width + x) * 4
-                    if (data[i + 3] < 10) continue // píxel transparente
+                    if (data[i + 3] < 10) continue
                     particulas.push({
                         x,
                         y,
@@ -85,8 +83,6 @@ export default function Desintegracion({
             ctx.clearRect(0, 0, canvas.width, canvas.height)
             timeoutId = setTimeout(() => {
                 if (cancelado) return
-                // Captura el cuadro visible del <img> (último del GIF) ANTES de
-                // desmontarlo, para que la desintegración parta sin salto visual
                 const visible = imgRef.current
                 try {
                     if (visible && visible.naturalWidth) {
@@ -111,7 +107,6 @@ export default function Desintegracion({
                         ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
                     }
                 } catch {
-                    // Si el canvas se contamina, usa las partículas iniciales
                     ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
                 }
                 setFase('desintegrando')

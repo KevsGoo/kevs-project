@@ -1,6 +1,14 @@
 import '../Style/Tarjeta.css'
-export default function Imagen({img}){
+import DesintegracionReversible from './Tarjeta/DesintegracionReversible.jsx'
+
+export default function Imagen({img, fallback, retraso = 500}){
     return(
-        <img className="Imagen" src={img} alt="" />
+        <DesintegracionReversible
+            src={img}
+            fallback={fallback}
+            retraso={retraso}
+            duracion={2200}
+            paso={4}
+        />
     )
 }

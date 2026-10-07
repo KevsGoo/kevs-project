@@ -10,6 +10,7 @@ export default function Home(){
 
     return (
         <div className="Home">
+            <h1 className="Bienvenidos">Bienvenidos</h1>
             <Desintegracion
                 src={ABC}
                 retraso={2500}

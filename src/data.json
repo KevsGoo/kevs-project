@@ -1,30 +1,37 @@
 [
     {
         "id": 1,
-        "title": "Carl",
-        "img": "images.jpeg",
-        "descripcion": "Carl es un minion alto de dos ojos que siempre posa con las manos en la cintura, muy seguro y divertido con sus compañeros",
+        "title": "Bad Bunny",
+        "img": "bad-bunny.jpeg",
+        "descripcion": "Bad Bunny es el Conejo Malo, el más grande del género urbano, siempre rompiendo récords con su flow único y su estilo atrevido",
         "color": "#FF6B6B"
     },
     {
         "id": 2,
-        "title": "Dave",
-        "img": "minion2.jpg",
-        "descripcion": "Dave es un minion gordito y sonriente de dos ojos, siempre alegre y listo para ayudar con una gran sonrisa",
+        "title": "Jhayco",
+        "img": "jhayco.jpeg",
+        "descripcion": "Jhayco es un artista versátil y creativo, famoso por sus letras pegajosas y su energía en el escenario que pone a todos a cantar",
         "color": "#4ECDC4"
     },
     {
         "id": 3,
-        "title": "Bob",
-        "img": "minion3.jpeg",
-        "descripcion": "Bob es el minion más tierno, inseparable de su osito Tim, juguetón, curioso y lleno de ternura",
+        "title": "Mora",
+        "img": "mora.jpeg",
+        "descripcion": "Mora es el compositor estrella, misterioso con sus gafas oscuras, creador de éxitos que mezcla lo romántico con lo urbano",
         "color": "#FFD93D"
     },
     {
         "id": 4,
-        "title": "Kevin y Stuart",
-        "img": "minion4.jpeg",
-        "descripcion": "Kevin y Stuart disfrazados para una misión especial, el dúo más cómico que siempre arma planes divertidos juntos",
+        "title": "Anuel",
+        "img": "anuel.jpg",
+        "descripcion": "Anuel es el Dios del Trap latino, con su voz ronca y sus historias de calle que lo convirtieron en leyenda del género",
         "color": "#9B5DE5"
+    },
+    {
+        "id": 5,
+        "title": "Tainy",
+        "img": "tainy.jpeg",
+        "descripcion": "Tainy es el productor genio detrás de los hits más grandes, el mago en el estudio que crea los ritmos que todos bailan",
+        "color": "#00BBF9"
     }
 ]

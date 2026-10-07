@@ -1,31 +1,34 @@
 import Tarjeta from '../Orquestadores/Tarjeta.jsx'
-import minions from '../data.json'
+import artistas from '../data.json'
 import Bot from '../Componentes/Tarjeta/Boton.jsx'
-import imgCarl from '../img/images.jpeg'
-import imgDave from '../img/minion2.jpg'
-import imgBob from '../img/minion3.jpeg'
-import imgKevinStuart from '../img/minion4.jpeg'
 import imgBoton from '../img/boton.jpeg'
+import imgBadBunny from '../img/bad-bunny.jpeg'
+import imgJhayco from '../img/jhayco.jpeg'
+import imgMora from '../img/mora.jpeg'
+import imgAnuel from '../img/anuel.jpg'
+import imgTainy from '../img/tainy.jpeg'
 import { useNavigate } from 'react-router-dom'
 
 const imagenes = {
-  'images.jpeg': imgCarl,
-  'minion2.jpg': imgDave,
-  'minion3.jpeg': imgBob,
-  'minion4.jpeg': imgKevinStuart
+  'bad-bunny.jpeg': imgBadBunny,
+  'jhayco.jpeg': imgJhayco,
+  'mora.jpeg': imgMora,
+  'anuel.jpg': imgAnuel,
+  'tainy.jpeg': imgTainy
 }
 
 export default function Tar() {
   const navigate = useNavigate()
   return (
     <div className="Contenedor">
-      {minions.map(minion => (
+      {artistas.map((artista, index) => (
         <Tarjeta
-          key={minion.id}
-          title={minion.title}
-          description={minion.descripcion}
-          img={imagenes[minion.img]}
-          color={minion.color}
+          key={artista.id}
+          title={artista.title}
+          description={artista.descripcion}
+          img={imagenes[artista.img]}
+          color={artista.color}
+          retraso={600 + index * 450}
         />
       ))}
       <div className="ZonaBoton">
