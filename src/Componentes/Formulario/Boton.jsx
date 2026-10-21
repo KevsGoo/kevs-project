@@ -1,7 +1,7 @@
-export default function Boton({tipo, nombre = "button"}){
+export default function Boton({tipo, nombre, Pulsado}){
     return(
         <div>
-            <button type={tipo}>{nombre}</button>
+            <button type={tipo} onClick={Pulsado}>{nombre}</button>
         </div>
     )
 }
