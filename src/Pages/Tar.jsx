@@ -17,16 +17,20 @@ const imagenes = {
   'tainy.jpeg': imgTainy
 }
 
-export default function Tar() {
+export default function Tar({tarjetas = []}) {
   const navigate = useNavigate()
+  const lista = [
+    ...artistas.map(artista => ({ ...artista, img: imagenes[artista.img] })),
+    ...tarjetas
+  ]
   return (
     <div className="Contenedor">
-      {artistas.map((artista, index) => (
+      {lista.map((artista, index) => (
         <Tarjeta
           key={artista.id}
           title={artista.title}
           description={artista.descripcion}
-          img={imagenes[artista.img]}
+          img={artista.img}
           color={artista.color}
           retraso={600 + index * 450}
         />

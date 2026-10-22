@@ -1,4 +1,4 @@
-export default function Campos({etiqueta, tipo, holder, valor}){
+export default function Campos({etiqueta, tipo, holder, valor, onCambio}){
     return(
         <div>
             <label htmlFor={etiqueta}>{etiqueta}</label>
@@ -8,6 +8,7 @@ export default function Campos({etiqueta, tipo, holder, valor}){
                 type={tipo} 
                 placeholder={holder}
                 value={valor}
+                onChange={onCambio}
             />
         </div>
     )
