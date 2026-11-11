@@ -1,0 +1,47 @@
+.NoEncontrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.NoEncontradoCodigo {
+    margin: 0;
+    font-size: 88px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 4px;
+    color: #d4af37;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.NoEncontradoTexto {
+    margin: 0;
+    font-size: 16px;
+    color: #c9b896;
+    letter-spacing: 0.5px;
+}
+
+.NoEncontradoBoton {
+    display: inline-block;
+    padding: 13px 26px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 6px;
+    background: linear-gradient(135deg, #5a4f3a, #d4af37);
+    color: #14100a;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.NoEncontradoBoton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+}

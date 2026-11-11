@@ -10,7 +10,7 @@ export default function App() {
   const [tarjetas, setTarjetas] = useState([])
 
   const agregar = (tarjeta) => {
-    setTarjetas([...tarjetas, { ...tarjeta, id: `tarjeta-${Date.now()}` }])
+    setTarjetas((prev) => [...prev, { ...tarjeta, id: `tarjeta-${Date.now()}-${prev.length}` }])
   }
 
   return (

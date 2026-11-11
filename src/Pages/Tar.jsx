@@ -7,7 +7,6 @@ import imgJhayco from '../img/jhayco.jpeg'
 import imgMora from '../img/mora.jpeg'
 import imgAnuel from '../img/anuel.jpg'
 import imgTainy from '../img/tainy.jpeg'
-import { useNavigate } from 'react-router-dom'
 
 const imagenes = {
   'bad-bunny.jpeg': imgBadBunny,
@@ -18,7 +17,6 @@ const imagenes = {
 }
 
 export default function Tar({tarjetas = []}) {
-  const navigate = useNavigate()
   const lista = [
     ...artistas.map(artista => ({ ...artista, img: imagenes[artista.img] })),
     ...tarjetas
@@ -36,7 +34,7 @@ export default function Tar({tarjetas = []}) {
         />
       ))}
       <div className="ZonaBoton">
-        <Bot img={imgBoton} alt='Botón start' onClick={() => navigate('/Formulario')} />
+        <Bot img={imgBoton} alt='Botón start' />
       </div>
     </div>
   )
