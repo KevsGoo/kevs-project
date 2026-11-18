@@ -1,0 +1,6 @@
+export { default as useTarjetas } from './useTarjetas.js'
+export { default as useListaTarjetas } from './useListaTarjetas.js'
+export { default as useFormulario, CAMPOS_FORMULARIO } from './useFormulario.js'
+export { default as useNavegarATarjetas } from './useNavegarATarjetas.js'
+export { default as useDesintegracion } from './useDesintegracion.js'
+export { default as useDesintegracionReversible } from './useDesintegracionReversible.js'

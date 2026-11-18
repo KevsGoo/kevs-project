@@ -1,12 +1,10 @@
-import { useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Desintegracion from "../Componentes/Home/Desintegracion.jsx";
 import ABC from "../img/pedomelo.gif";
+import { useNavegarATarjetas } from "../hooks/index.js";
 import "../Style/Home.css";
 
 export default function Home(){
-    const navigate = useNavigate();
-    const irATarjetas = useCallback(() => navigate("/Tarjetas"), [navigate]);
+    const irATarjetas = useNavegarATarjetas();
 
     return (
         <div className="Home">

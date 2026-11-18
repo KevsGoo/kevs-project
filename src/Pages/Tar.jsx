@@ -1,26 +1,13 @@
 import Tarjeta from '../Orquestadores/Tarjeta.jsx'
-import artistas from '../data.json'
 import Bot from '../Componentes/Tarjeta/Boton.jsx'
 import imgBoton from '../img/boton.jpeg'
-import imgBadBunny from '../img/bad-bunny.jpeg'
-import imgJhayco from '../img/jhayco.jpeg'
-import imgMora from '../img/mora.jpeg'
-import imgAnuel from '../img/anuel.jpg'
-import imgTainy from '../img/tainy.jpeg'
+import { useListaTarjetas } from '../hooks/index.js'
 
-const imagenes = {
-  'bad-bunny.jpeg': imgBadBunny,
-  'jhayco.jpeg': imgJhayco,
-  'mora.jpeg': imgMora,
-  'anuel.jpg': imgAnuel,
-  'tainy.jpeg': imgTainy
-}
+const SIN_TARJETAS = []
 
-export default function Tar({tarjetas = []}) {
-  const lista = [
-    ...artistas.map(artista => ({ ...artista, img: imagenes[artista.img] })),
-    ...tarjetas
-  ]
+export default function Tar({ tarjetas = SIN_TARJETAS }) {
+  const { lista, retrasoDe } = useListaTarjetas(tarjetas)
+
   return (
     <div className="Contenedor">
       {lista.map((artista, index) => (
@@ -30,7 +17,7 @@ export default function Tar({tarjetas = []}) {
           description={artista.descripcion}
           img={artista.img}
           color={artista.color}
-          retraso={600 + index * 450}
+          retraso={retrasoDe(index)}
         />
       ))}
       <div className="ZonaBoton">

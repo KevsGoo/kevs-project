@@ -1,17 +1,13 @@
 import '../Style/Tarjeta.css'
-import { useState } from 'react'
 import Tar from './Tar.jsx'
 import Formulario from "../Orquestadores/Formulario.jsx"
 import Home from './h.jsx'
 import NotFound from './NotFound.jsx'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { useTarjetas } from '../hooks/index.js'
 
 export default function App() {
-  const [tarjetas, setTarjetas] = useState([])
-
-  const agregar = (tarjeta) => {
-    setTarjetas((prev) => [...prev, { ...tarjeta, id: `tarjeta-${Date.now()}-${prev.length}` }])
-  }
+  const { tarjetas, agregar } = useTarjetas()
 
   return (
     <BrowserRouter>
